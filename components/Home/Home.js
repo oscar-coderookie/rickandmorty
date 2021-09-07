@@ -13,16 +13,24 @@ const HomeScreen = ({ navigation }) => {
         <View style={styles.homeBtnBlock}>
           <Button
             style={styles.homeButton}
-            color="#B9D33D"
+            color="rgba(185,211,61,0.7)"
             onPress={() => navigation.navigate("Characters")}
             title="Characters"
           />
           <Button
             style={styles.homeButton}
-            color="#00B0C8"
+            color="rgba(0,176,200,0.7)"
             onPress={() => navigation.navigate("Planets")}
             title="PLanets"
           />
+          <Button
+            style={styles.homeButton}
+            color='rgba(143,24,168,0.7)'
+            onPress={() => navigation.navigate("Episodes")}
+            title="episodes"
+          />
+        <Text style={styles.copyright}>Developed by Oscar Serna Carvajal - All Rights Reserved</Text>
+
         </View>
       </View>
     </View>
@@ -38,7 +46,8 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
   homeBtnBlock: {
-    height: 100,
+    height: 150,
+    marginBottom:10,
     justifyContent:'space-between'
   },
   homeTitle: {
@@ -60,6 +69,12 @@ const styles = StyleSheet.create({
     height: 100,
     marginVertical: 16,
   },
+  copyright: {
+    fontSize: 12,
+    textAlign: "center",
+    marginTop: 10,
+    color: "white",
+  }
 });
 
 export default HomeScreen;

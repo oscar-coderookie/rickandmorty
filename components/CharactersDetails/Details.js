@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     width: "100%",
     alignItems: "center",
     paddingTop: 20,
-    backgroundColor: "#6d12f0",
+    backgroundColor: "#00B0C8",
     justifyContent: "center"
   },
 });

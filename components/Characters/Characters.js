@@ -22,7 +22,7 @@ const CharactersSection = ({ navigation }) => {
   }, []);
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.charactersContainer}>
       {isLoading ? (
         <ActivityIndicator />
       ) : (
@@ -32,6 +32,7 @@ const CharactersSection = ({ navigation }) => {
           keyExtractor={({ id }, index) => String(id)}
           renderItem={({ item }) => (
             <TouchableOpacity
+              style={styles.characterTouchable}
               onPress={() =>
                 navigation.navigate("Details", {
                   id: item.id,
@@ -56,33 +57,45 @@ const CharactersSection = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  charactersContainer: {
+    flex: 1,
+    width: "100%",
+  },
   charactersList: {
     backgroundColor: "#13b5cb",
     width: "100%",
     paddingTop: 10,
     paddingBottom: 20,
+    
+  },
+  characterTouchable: {
+    borderRadius: 6,
+    alignItems: "center",
   },
   characterView: {
-    flex: 1,
+    width: 270,
+    backgroundColor: "white",
     justifyContent: "center",
-    height: 300,
+    height: 270,
     marginVertical: 10,
     alignItems: "center",
+    borderRadius: 6,
+    overflow:'hidden'
   },
   imgCharacter: {
     height: "100%",
-    width: "80%",
+    width: "100%",
     position: "absolute",
   },
   textCharacters: {
     textAlign: "center",
-    color: "#13b5cb",
-    textShadowOffset: {height:0, width: 0},
+    color: "#B9D33D",
+    textShadowOffset: { height: 0, width: 0 },
     textShadowRadius: 8,
-    textShadowColor: "#baff00",
+    textShadowColor: "#00B0C8",
     fontWeight: "600",
-    fontSize: 40,
-    width: "80%",
+    fontSize: 30,
+    width: "90%",
     position: "absolute",
     bottom: 20,
   },

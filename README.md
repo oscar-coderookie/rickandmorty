@@ -9,6 +9,6 @@
 
 # Rick & Morty - Mobile App
 
-<p align="center"><img src="https://user-images.githubusercontent.com/82784278/132308431-c45d156d-1668-4770-a976-2bee742c9f59.png" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/82784278/132308431-c45d156d-1668-4770-a976-2bee742c9f59.png" width="400" /></p>
 
 First react native App for the Rick & Morty series, to show characters, movies and episodes, directly fetching to oficial Api Rest.
